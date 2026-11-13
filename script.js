@@ -116,11 +116,19 @@ if (feedbackCarousel) {
       previous.disabled = feedbackCarousel.scrollLeft < 3;
       next.disabled = atEnd;
       position.textContent = `${atEnd ? cards.length : currentIndex() + 1} / ${cards.length}`;
+      if (window.matchMedia('(max-width: 700px)').matches) {
+        const activeCard = cards[currentIndex()];
+        feedbackCarousel.style.height = `${activeCard.offsetHeight + 14}px`;
+      } else {
+        feedbackCarousel.style.removeProperty('height');
+      }
     };
     previous.addEventListener('click', () => move(-1));
     next.addEventListener('click', () => move(1));
     feedbackCarousel.addEventListener('scroll', update, {passive:true});
     window.addEventListener('resize', update);
+    const cardResizeObserver = new ResizeObserver(update);
+    cards.forEach(card => cardResizeObserver.observe(card));
     update();
   }
 }
