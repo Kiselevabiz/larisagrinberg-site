@@ -33,4 +33,4 @@
 }
 
 .site-footer .max-brand-icon{display:block;width:24px;height:24px;flex:0 0 24px;background:currentColor;-webkit-mask:url("assets/max-official.svg") center/contain no-repeat;mask:url("assets/max-official.svg") center/contain no-repeat}
-.site-footer .footer-channel .max-brand-icon{width:25px;height:25px;flex-basis:25px}
+.site-footer .footer-channel:not(.footer-max)>svg:first-child{color:#2AABEE}
