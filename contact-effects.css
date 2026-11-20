@@ -1,0 +1,39 @@
+/* A quiet light treatment for the closing invitation, without new panels. */
+#contact .contact-inner{position:relative;isolation:isolate}
+#contact .contact-inner::before{
+ content:"";position:absolute;z-index:-1;pointer-events:none;
+ top:-110px;left:50%;width:min(1000px,115vw);height:470px;
+ transform:translateX(-50%);
+ background:radial-gradient(ellipse at 50% 38%,#db78ed30 0%,#9b51e31f 38%,transparent 72%);
+}
+#contact .contact-directions>div{position:relative;isolation:isolate}
+#contact .contact-directions>div::before{
+ content:"";position:absolute;inset:-24px -10px;z-index:-1;pointer-events:none;
+ background:radial-gradient(ellipse at 50% 35%,#d477ef29,transparent 72%);
+ opacity:0;transition:opacity .35s ease;
+}
+#contact .contact-directions h3::after{
+ content:"";display:block;width:58px;height:2px;margin-top:20px;
+ background:linear-gradient(90deg,#eaa8f3,#9c6aef00);opacity:.45;
+ transition:opacity .35s ease;
+}
+@media(hover:hover) and (pointer:fine){
+ #contact .contact-directions>div:hover::before{opacity:1}
+ #contact .contact-directions>div:hover h3::after{opacity:1}
+}
+@media(prefers-reduced-motion:no-preference){
+ #contact .contact-directions>div.is-arriving{
+  animation:contact-arrive .65s cubic-bezier(.2,.65,.3,1) both;
+ }
+ #contact .contact-directions>div:nth-child(2){animation-delay:.09s}
+ #contact .contact-directions>div:nth-child(3){animation-delay:.18s}
+}
+@keyframes contact-arrive{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media(max-width:1000px){
+ #contact .contact-directions>div.is-arriving{animation-delay:0s}
+ #contact .contact-inner::before{top:-55px;height:350px}
+}
+@media(prefers-reduced-motion:reduce){
+ #contact .contact-directions>div.is-arriving{animation:none}
+ #contact .contact-directions>div::before,#contact .contact-directions h3::after{transition:none}
+}

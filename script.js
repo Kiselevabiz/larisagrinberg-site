@@ -155,3 +155,16 @@ videoReviews.forEach((button, index) => {
   ['play', 'pause', 'ended'].forEach(event => video.addEventListener(event, update));
   update();
 });
+
+// Reveal each direction once; the copy stays visible if motion or observers are unavailable.
+const contactDirections = document.querySelectorAll('#contact .contact-directions > div');
+if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const contactObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-arriving');
+      contactObserver.unobserve(entry.target);
+    });
+  }, {threshold: 0.15});
+  contactDirections.forEach(direction => contactObserver.observe(direction));
+}
