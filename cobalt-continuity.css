@@ -623,3 +623,7 @@ body{background-image:none}
  #reviews .video-reviews{margin-top:20px;margin-bottom:24px}
  #reviews .feedback-grid{overflow-y:hidden}
 }
+
+/* Keep orbit markers centered beside their labels at every screen size. */
+#approach .cosmos-controls button{display:inline-flex;align-items:center;gap:7px}
+#approach .cosmos-controls button::before{flex:0 0 6px;margin:0}
