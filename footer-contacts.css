@@ -1,0 +1,30 @@
+.site-footer .footer-grid{grid-template-columns:1fr .65fr 1.8fr;gap:36px}
+.site-footer .footer-contact-heading{font:500 20px/1.4 var(--sans);color:var(--ink);margin:0 0 4px}
+.site-footer .footer-write-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%}
+.site-footer .footer-contact{min-height:50px;max-width:none;padding:10px 15px;gap:9px;border-radius:28px;font:500 15px/1.4 var(--sans);backdrop-filter:none;-webkit-backdrop-filter:none;transition:filter .2s}
+.site-footer .footer-contact>span:last-child{min-width:0;flex:1}
+.site-footer .footer-contact-icon{width:23px;height:24px;flex:0 0 23px}
+.site-footer .footer-contact-icon svg{width:22px;height:22px}
+.site-footer .footer-icon-letters{font:700 15px/1 var(--sans);letter-spacing:-1px}
+.site-footer .footer-social-links{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:14px;width:100%}
+.site-footer .footer-channel{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:10px 17px;border:1px solid #e6a2f873;border-radius:26px;background:linear-gradient(115deg,#9e4fe52b,#e16deb1a);color:#f4d5ff;font:500 16px/1.4 var(--sans);box-shadow:0 0 20px #c26bf226;transition:background .2s,border-color .2s}
+.site-footer .footer-channel:hover{color:#fff;background:#bf6bf23d;border-color:#efb6ff}
+.site-footer .footer-channel svg{display:block;width:22px;height:22px}
+.site-footer .footer-max-icon{font:700 17px/1 var(--sans)}
+.site-footer .footer-links .underlink{margin-top:14px}
+@media(max-width:1100px){
+ .site-footer .footer-grid{grid-template-columns:1fr 1fr}
+ .site-footer .footer-links{grid-column:1/-1;max-width:720px}
+}
+@media(max-width:700px){
+ .site-footer .footer-grid{gap:26px}
+ .site-footer .footer-grid>div:first-child{grid-column:1/-1}
+ .site-footer .footer-grid nav{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:4px 20px;font-size:16px}
+ .site-footer .footer-write-links{grid-template-columns:1fr;gap:10px}
+ .site-footer .footer-contact{width:100%;min-height:48px;font-size:16px;padding:11px 18px}
+ .site-footer .footer-social-links{gap:10px;margin-top:12px}
+ .site-footer .footer-channel{font-size:15px;padding-inline:14px}
+}
+@media(prefers-reduced-motion:reduce){
+ .site-footer .footer-contact,.site-footer .footer-channel{transition:none}
+}
