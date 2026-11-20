@@ -1,0 +1,36 @@
+#top .hero-experience{
+ position:absolute;left:5%;bottom:44px;display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+ width:364px;max-width:90%;margin:0;padding:0;
+ border:0;border-radius:0;background:none;box-shadow:none;
+ backdrop-filter:none;-webkit-backdrop-filter:none;
+}
+#top .hero-experience .experience-badge{
+ display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+ gap:7px;min-width:0;min-height:100px;max-width:none;margin:0;padding:16px 20px;
+ border:1px solid #e1eaff38;border-radius:19px;background:#09234b99;
+ backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+ box-shadow:none;color:#e0e8f5;font:400 13px/1.45 var(--sans);text-align:left;
+}
+#top .hero-experience .experience-badge strong{font:500 34px/1 var(--sans);color:#fff;letter-spacing:-.035em}
+#top .hero-experience .experience-badge span{display:block}
+@media(min-width:1001px){
+ #top .hero-experience{width:440px;gap:16px;bottom:clamp(64px,9vw,130px)}
+ #top .hero-experience .experience-badge{min-height:120px;padding:20px 22px;background:#09234bb3;border-color:#e1eaff66;font-size:15px;gap:10px}
+ #top .hero-experience .experience-badge strong{font-size:44px}
+}
+@media(min-width:1650px){#top .hero-experience{left:calc((100% - 1485px)/2)}}
+@media(min-width:701px) and (max-width:1000px){
+ #top .hero-experience{position:relative;left:auto;bottom:auto;width:340px;margin:28px 5% 0}
+ #top .hero-experience .experience-badge{min-height:94px;padding:15px 18px}
+ #top .hero-experience .experience-badge strong{font-size:32px}
+}
+@media(max-width:700px){
+ #top .hero-experience{position:relative;left:auto;bottom:auto;width:90%;max-width:380px;margin:26px auto 0;gap:12px}
+ #top .hero-experience .experience-badge{min-height:94px;padding:15px 16px;align-items:flex-start;text-align:left}
+ #top .hero-experience .experience-badge strong{font-size:32px}
+}
+@media(max-width:360px){
+ #top .hero-experience{gap:10px}
+ #top .hero-experience .experience-badge{padding-inline:12px;font-size:12px}
+}

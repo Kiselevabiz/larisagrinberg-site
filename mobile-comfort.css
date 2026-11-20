@@ -1,0 +1,11 @@
+@media(max-width:700px){
+ #top .hero-side .telegram-drop{display:flex;width:fit-content;max-width:100%;margin-inline:auto}
+ #reviews{width:100%;padding-inline:12px}
+ #reviews .testimonials-heading{padding-inline:22px}
+ #reviews .feedback-carousel{padding-inline:22px}
+ #reviews .feedback-grid{gap:16px;padding-inline:0}
+ #reviews .handwritten-review{flex-basis:100%;width:100%;padding:20px 16px}
+ #reviews .feedback-navigation button{width:36px;height:44px}
+ #reviews .feedback-prev{left:-8px}
+ #reviews .feedback-next{right:-8px}
+}
