@@ -1,0 +1,18 @@
+/* Switch dense desktop compositions before their text becomes too narrow. */
+@media(min-width:701px) and (max-width:1000px){
+ #sessions .session-grid{grid-template-columns:1fr;max-width:680px;margin-inline:auto;gap:24px}
+ #sessions .sessions-heading{grid-template-columns:1fr;gap:24px}
+ #sessions .sessions-heading>p{max-width:680px}
+ #requests .request-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding:32px 24px}
+ #requests .request-list article:nth-child(n){width:100%;padding:22px!important}
+ #requests .request-list h3{font-size:28px}
+ #requests .request-list p{font-size:18px;overflow-wrap:break-word}
+}
+/* Long Russian words and expanded descriptions must remain inside their columns. */
+.session-details-content,.methods-content,.footer-links,.about-copy,.approach-copy{min-width:0;overflow-wrap:break-word}
+@media(max-width:400px){
+ #sessions .session{padding-inline:20px}
+ #sessions .price-row{gap:12px;flex-wrap:wrap}
+ #about .telegram-drop{padding-inline:14px;gap:9px}
+ #about .telegram-drop-copy strong{font-size:18px}
+}
