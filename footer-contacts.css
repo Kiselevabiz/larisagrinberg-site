@@ -33,6 +33,6 @@
 }
 
 .site-footer .max-brand-icon{display:block;width:24px;height:24px;flex:0 0 24px;background:currentColor;-webkit-mask:url("assets/max-official.svg") center/contain no-repeat;mask:url("assets/max-official.svg") center/contain no-repeat}
-.site-footer .footer-channel:not(.footer-max)>svg:first-child{color:#2AABEE}
+.site-footer .footer-channel:not(.footer-max)>span:first-child svg{color:#2AABEE}
 
 .site-footer .footer-contact-icon :is(svg,.max-brand-icon){display:block;width:22px;height:22px;flex:none}
